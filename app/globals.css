@@ -1,0 +1,83 @@
+
+@import "tailwindcss";
+
+/* Enable dark: utilities using the .dark class */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Shared color tokens for Tailwind CSS 4 */
+@theme inline {
+  --color-brand-primary: var(--brand-primary);
+  --color-brand-hover: var(--brand-hover);
+  --color-brand-soft: var(--brand-soft);
+  --color-brand-soft-hover: var(--brand-soft-hover);
+  --color-brand-text: var(--brand-text);
+  --color-brand-border: var(--brand-border);
+
+  --color-brand-gradient-start: var(--brand-gradient-start);
+  --color-brand-gradient-middle: var(--brand-gradient-middle);
+  --color-brand-gradient-end: var(--brand-gradient-end);
+
+  --color-page: var(--page-bg);
+  --color-surface: var(--surface-bg);
+  --color-surface-hover: var(--surface-hover);
+}
+
+/* Light mode */
+:root {
+  color-scheme: light;
+
+  --brand-primary: #6d28d9;
+  --brand-hover: #5b21b6;
+  --brand-soft: #ede9fe;
+  --brand-soft-hover: #ddd6fe;
+  --brand-text: #5b21b6;
+  --brand-border: #c4b5fd;
+
+  --brand-gradient-start: #6d28d9;
+  --brand-gradient-middle: #7c3aed;
+  --brand-gradient-end: #c026d3;
+
+  --page-bg: #faf7ff;
+  --surface-bg: #ffffff;
+  --surface-hover: #f5f0ff;
+}
+
+/* Dark mode */
+.dark {
+  color-scheme: dark;
+
+  --brand-primary: #a78bfa;
+  --brand-hover: #c4b5fd;
+  --brand-soft: #2e1b4b;
+  --brand-soft-hover: #3b2460;
+  --brand-text: #c4b5fd;
+  --brand-border: #6d28d9;
+
+  --brand-gradient-start: #c4b5fd;
+  --brand-gradient-middle: #a78bfa;
+  --brand-gradient-end: #e879f9;
+
+  --page-bg: #10081f;
+  --surface-bg: #190e2b;
+  --surface-hover: #211139;
+}
+
+/* Global page defaults */
+html {
+  scroll-behavior: smooth;
+  background-color: var(--page-bg);
+}
+
+body {
+  background-color: var(--page-bg);
+  color: #18181b;
+}
+
+.dark body {
+  color: #ffffff;
+}
+
+::selection {
+  background: #c4b5fd;
+  color: #2e1065;
+}
